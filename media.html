@@ -6,6 +6,93 @@
     <title>Media - Jessa Fayer's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+        }
+        .sidebar {
+            position: fixed;
+            width: 200px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 20px;
+            float: left;
+        }
+        .sidebar a {
+            text-decoration: none;
+            display: block;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+        }
+        video {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -23,6 +110,8 @@
             <h2>Media</h2>
             <div class="gallery">
                 <h3>Photos</h3>
+                <div class="photo-grid">
+                    
                 <div class="photo-grid">
                     <img src="Jessa Fayer.png" alt="Photo 1" class="clickable">
                     <img src="Jessa Fayer copy.png" alt="Photo 2" class="clickable highlight">
@@ -316,38 +405,52 @@
                     <img src="" alt="Photo 36" class="clickable">
                     <img src="k==.JPG" alt="Photo 36" class="clickable">
 
-                   
-                    
-
-
                 </div>
-                <h3>Video Reels</h3>
-                <video controls>
-                    <source src="RPReplay_Final1673126965.mov" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="15a3a5b4220e4adba52bedbb1d0219ae" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="9de20051006c4430bdcd9f62ffbf21f2.MP4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <video controls>
-                    <source src="36029547bf214b4e8cd401e7e18d6956.MP4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
             </div>
+            <h3>Video Reels</h3>
+            <video controls>
+                <source src="RPReplay_Final1673126965.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="9de20051006c4430bdcd9f62ffbf21f2.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
+
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
     </div>
+
     <footer>
         <p>&copy; 2024 Jessa Fayer. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+        // JavaScript for Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const clickableImages = document.querySelectorAll('.clickable');
+        const closeBtn = document.querySelector('.close');
+
+        clickableImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
