@@ -3,9 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills & Resume - Jessa Fayer's Portfolio</title>
+    <title>Skills & Resume - Jessa Fayer</title>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: linear-gradient(to right, #f4f4f4, #ffffff);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 30px 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 220px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            padding-top: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #575757;
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        h2, h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #ff758c;
+            border-bottom: 2px solid #ff758c;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .resume-section {
+            margin-top: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .resume-section h3 {
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+
+        .resume-section iframe {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .resume-section a {
+            display: inline-block;
+            background-color: #ff758c;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-section a:hover {
+            background-color: #ff5a73;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -14,67 +123,24 @@
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="about.html">About Me</a>
+        <a href="spotlight.html">Spotlight</a>
+        <a href="digitals.html">Digitals</a>
+        <a href="demo.html">Acting Reel</a>
+        <a href="media.html">Gallery</a>
         <a href="skills.html">Skills & Resume</a>
-        <a href="media.html">Media</a>
         <a href="contact.html">Contact</a>
+        <a href="projects.html">Projects</a>
     </div>
     <div class="content">
-        <div id="skills" class="section">
-            <h2>Skills & Resume</h2>
-            <ul>
-                <li><strong>Age Range:</strong> 10-24</li>
-                <li><strong>Height:</strong> 5'3" / 160cm</li>
-                <li><strong>Weight:</strong> 93lbs / 42kg</li>
-                <li><strong>Build:</strong> Slim</li>
-                <li><strong>Hair:</strong> Brown</li>
-                <li><strong>Eyes:</strong> Green</li>
-                <li><strong>Chest:</strong> 28" / 71cm</li>
-                <li><strong>Waist:</strong> 23" / 58cm</li>
-                <li><strong>Hips:</strong> 32" / 81cm</li>
-                <li><strong>Dress Size:</strong> UK 2 / AUS 2 / US 00</li>
-            </ul>
-            <h3>Skills</h3>
-            <ul>
-                <li><strong>Sports/Fitness:</strong> Gymnastics</li>
-                <li><strong>Modeling:</strong> Commercial, Print & Digital, Lifestyle & Editorial, Parts, Beauty & Makeup</li>
-                <li><strong>Acting Techniques:</strong> Improvisation, Method Acting, Drama Training</li>
-                <li><strong>Content Creation:</strong> Influencer Marketing, User-Generated Content (UGC), Instagram</li>
-                <li><strong>Voice Style:</strong> Sad, Emotional, Expressive</li>
-            </ul>
-            <h3>Design & Technical Skills</h3>
-            <ul>
-                <li><strong>Design & Prototyping Tools:</strong> Figma, Adobe XD, Sketch, InVision, Principle, Photoshop, Illustrator</li>
-                <li><strong>UX Design:</strong> User flows, wireframes, mockups, prototypes, user-centered design principles</li>
-                <li><strong>Programming Languages:</strong> Python, JavaScript, SQL, Java</li>
-                <li><strong>Data Engineering:</strong> Data modeling, database management, ETL processes, data visualization</li>
-                <li><strong>Soft Skills:</strong> Problem-solving, critical thinking, collaboration, effective communication</li>
-            </ul>
-            <h3>Experience</h3>
-            <p> Curated photo shoots in the past five years, featured in Off Town Magazine, and Glam Magazine.</p>
-            <h3>Acting</h3>
-            <p>I've taken on  lead roles in evocative student films like "Are You the One" and the chilling "Brake Check Horror." Additionally, I delivered a memorable co-starring performance in the poignant film "All Forgotten Now."</p>
-            <h3>Social Media</h3>
-            <p>Follow me on Instagram: <a href="https://www.instagram.com/jessacheers">@jessacheers</a></p>
-            <h3>Union Membership</h3>
-            <p>You haven't added any union membership. <a href="#">Add union membership &rsaquo;</a></p>
-            <h3>Credits</h3>
-            <ul>
-                <li><strong>Film:</strong> 2 credits</li>
-                <li><strong>Commercials & Industrials:</strong> 2 credit</li>
-                <li><strong>Comedy & Improv:</strong> 1 credit</li>
-            </ul>
-            
-            <h3>License & Passport</h3>
-            <ul>
-                <li><strong>Driver's License:</strong> Yes</li>
-                <li><strong>Passport:</strong> Yes</li>
-            </ul>
-            <h3>Let's Connect!</h3>
-            <p>I'm always excited to connect with new professionals and explore exciting opportunities. Feel free to reach out to discuss potential collaborations, projects, or just to say hello!</p>
-        </div>
+        <section id="resume" class="resume-section">
+            <h2>Resume</h2>
+            <h3>Preview My Resume</h3>
+            <iframe src="/Users/jessafayer/Desktop/Jessa Fayer Studio/acting jessa res 2.pdf" title="Jessa Fayer Resume"></iframe>
+            <a href="/Users/jessafayer/Desktop/Jessa Fayer Studio/acting jessa res 2.pdf" download>Download My Resume</a>
+        </section>
     </div>
     <footer>
-        <p>&copy; 2024 Jessa Fayer. All rights reserved.</p>
+        <p>&copy; 2024 Jessa Fayer. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
