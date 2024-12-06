@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - Jessa Fayer's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 3rem;
+        }
+        .sidebar {
+            position: fixed;
+            width: 150px;
+            height: 100%;
+            background-color: #333;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .content {
+            margin-left: 180px;
+            padding: 20px;
+        }
+        .gallery-section {
+            margin-bottom: 50px;
+        }
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .photo-grid img {
+            max-width: 300px;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .photo-grid img:hover {
+            transform: scale(1.05);
+        }
+        /* Lightbox Modal Styling */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Jessa Fayer</h1>
+    </header>
+    
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="#portraits">Portraits</a>
+        <a href="#book-covers">Book Covers</a>
+        <a href="#bts">Behind the Scenes</a>
+        <a href="#outdoor-scenes">Outdoor Scenes</a>
+        <a href="#fashion">Fashion</a>
+        <a href="#studio">Studio Shots</a>
+        <a href="#travel">Travel</a>
+        <a href="#events">Events</a>
+        <a href="#videos">Video Reels</a>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Section 1: Portraits -->
+        <div id="portraits" class="gallery-section">
+            <h2>Portraits</h2>
+            <div class="photo-grid">
+                <img src="k==.JPG" alt="Portrait 4" class="clickable">
+                <img src="IMG_6851.JPG" alt="Portrait 4" class="clickable">
+                <img src="1B332532-98EF-46AB-886B-30F0EED03219.JPEG" alt="Portrait 4" class="clickable">
+                <img src="5AC9CE16-09F5-438B-BCCA-31FCDB0D8962.JPEG" alt="Portrait 1" class="clickable">
+                <img src="1717758318.421046.JPG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_6888.jpg" alt="Portrait 3" class="clickable">
+                <img src="IMG_2118.JPG" alt="Portrait 4" class="clickable">
+                <img src="IMG_4238.JPG" alt="Portrait 4" class="clickable">
+                <img src="AF10D556-6C97-43A9-9A58-139A13B117EB.JPG" alt="Portrait 4" class="clickable">
+                <img src="F40E9F66-75F0-4908-955B-8C69D35AA142 2.JPG" alt="Fashion 2" class="clickable">
+                <img src="IMG_2049.JPG" alt="Fashion 2" class="clickable">
+                <img src="22700203-305C-428C-84EF-500BDE6C8C1C.JPG" alt="Fashion 2" class="clickable">
+                <img src="A66B6392-8258-4410-9A91-13AF1613C718.JPEG" alt="Fashion 2" class="clickable">
+                <img src="C24F630C-97EA-49DD-A11D-E3FA3622A3E1.JPG" alt="Fashion 2" class="clickable">
+                <img src="D1795138-63C1-4016-8DB1-D263C61E4355.JPEG" alt="Fashion 2" class="clickable">
+                <img src="4B06D824-151D-4B4E-9542-1EDD9783C70E.JPG" alt="Fashion 2" class="clickable">
+            </div>
+        </div>
+                
+                
+               
+                
+                
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                
+
+
+                
+            </div>
+        </div>
+
+        <!-- Section 2: Book Covers -->
+        <div id="book-covers" class="gallery-section">
+            <h2>Book Covers</h2>
+            <div class="photo-grid">
+                <img src="IMG_2153.JPG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_2759.PNG" alt="Book Cover 1" class="clickable">
+                <img src="IMG_5444.jpg" alt="Book Cover 2" class="clickable">
+                <img src="IMG_4304.JPG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_8272.jpg" alt="Book Cover 3" class="clickable">
+            </div>
+        </div>
+
+        <!-- Section 3: Behind the Scenes -->
+        <div id="bts" class="gallery-section">
+            <h2>Behind the Scenes</h2>
+            <div class="photo-grid">
+                <img src="IMG_7974.JPG" alt="BTS 1" class="clickable">
+                <img src="IMG_3996 2.JPG" alt="BTS 2" class="clickable">
+                <img src="IMG_4566.jpg" alt="BTS 3" class="clickable">
+            </div>
+        </div>
+
+         <!-- Section 4: Parisian -->
+         <div id="Parisian" class="gallery-section">
+            <h2>Parisian</h2>
+            <div class="photo-grid">
+                <img src="IMG_1702.jpg" alt="Outdoor Scene 1" class="clickable">
+                <img src="Jessa Fayer - 36.PNG" alt="Outdoor Scene 2" class="clickable">
+                <img src="7FB9CA8E-1A2E-4A9C-83C6-4EB1CA5AC890.JPG" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_2474.JPG" alt="Fashion 2" class="clickable">
+            </div>
+
+            <!-- Section 4: Spring -->
+         <div id="Spring" class="gallery-section">
+            <h2>Spring</h2>
+            <div class="photo-grid">
+                <img src="IMG_4477.jpg" alt="Outdoor Scene 1" class="clickable">
+                <img src="IMG_4484.jpg" alt="Outdoor Scene 2" class="clickable">
+                <img src="IMG_4488.jpg" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_4489.jpg" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_6758.JPG" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_6892.jpg" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_4227.JPG" alt="Travel 3" class="clickable">
+            </div>
+
+             <!-- Section 4: The Roxy NYC -->
+         <div id="The-Roxy-NYC" class="gallery-section">
+            <h2>The Roxy NYC</h2>
+            <div class="photo-grid">
+                <img src="IMG_1652.jpg" alt="Outdoor Scene 1" class="clickable">
+                <img src="IMG_1651.jpg" alt="Outdoor Scene 2" class="clickable">
+                <img src="IMG_3574 2.jpg" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_3589 2.jpg" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_3591 2.jpg" alt="Outdoor Scene 3" class="clickable">
+            </div>
+
+                <!-- Section 4: NYC -->
+         <div id="NYC" class="gallery-section">
+            <h2>NYC</h2> 
+            <div class="photo-grid">
+                <img src="IMG_4635.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_4634.jpg" alt="Fashion 2" class="clickable">
+                <img src="Jessa Fayer - 49.PNG" alt="Fashion 2" class="clickable">
+                <img src="/Users/jessafayer/Downloads/IMG_3568 2.jpg" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="aa.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_2660.JPG" alt="Fashion 2" class="clickable">
+            </div>
+
+              <!-- Section 4: Personality -->
+         <div id="Personality" class="gallery-section">
+            <h2>Personality</h2> 
+            <div class="photo-grid">
+                <img src="1719242893.339015 3.PNG" alt="Fashion 2" class="clickable">
+                <img src="2040FBA8-EBE4-4036-8DEC-611937189BA4 2.JPG" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="" alt="Fashion 2" class="clickable">
+                <img src="AAFCB465-D3F2-469A-AA48-23E3F1B4B935.JPG" alt="Fashion 2" class="clickable">
+                <img src="0C117D6D-F141-42AD-8DB4-324D01D2FC50.JPG" alt="Fashion 2" class="clickable">
+            </div>
+
+        <!-- Section 4: Outdoor Scenes -->
+        <div id="outdoor-scenes" class="gallery-section">
+            <h2>Outdoor Scenes</h2>
+            <div class="photo-grid">
+                <img src="IMG_9561.JPG" alt="Fashion 2" class="clickable">
+                <img src="IMG_9563.JPG" alt="Fashion 2" class="clickable">
+                <img src="IMG_9564.JPG" alt="Fashion 2" class="clickable">
+                <img src="Jessa Fayer - 53.PNG" alt="Fashion 2" class="clickable">
+                <img src="IMG_3996 2.JPG" alt="Outdoor Scene 1" class="clickable">
+                <img src="IMG_4268.JPG" alt="Outdoor Scene 2" class="clickable">
+                <img src="IMG_1305.JPG" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_3994 2.JPG" alt="Outdoor Scene 3" class="clickable">
+                <img src="IMG_3996 2.JPG" alt="Outdoor Scene 3" class="clickable">
+                <img src="BE0BB056-C44C-43F0-A1D1-6A42EFEFEA30.JPEG" alt="Book Cover 3" class="clickable">
+                <img src="biggy.JPG" alt="Book Cover 3" class="clickable">
+                <img src="dad.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_4300 2.JPG" alt="Fashion 2" class="clickable">
+            </div>
+
+        </div>
+        <!-- Section 5: Romance Book Covers Sold -->
+        <div id="Romance-book-covers" class="gallery-section">
+            <h2>Romance Book Covers Sold</h2>
+            <div class="photo-grid">
+                <img src="IMG_8308.jpg" alt="Book Cover 1" class="clickable">
+                <img src="IMG_8313.jpg" alt="Book Cover 2" class="clickable">
+                <img src="IMG_8296.jpg" alt="Book Cover 3" class="clickable">
+                <img src="IMG_8288.jpg" alt="Book Cover 3" class="clickable">
+                <img src="IMG_8286.jpg" alt="Book Cover 3" class="clickable">
+                <img src="IMG_8953.jpg" alt="Book Cover 3" class="clickable">
+                <img src="IMG_8309.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_8303.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_8283.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_8298.jpg" alt="Fashion 2" class="clickable">
+                
+
+                <h2>I do not like this person</h2>
+            </div>
+        </div>
+
+    </div>
+    <!-- Section 5: Fairy -->
+    <div id="Fairy" class="gallery-section">
+        <h2>Fairy</h2>
+        <div class="photo-grid">
+            <img src="IMG_0937.jpg" alt="Book Cover 1" class="clickable">
+            <img src="IMG_5733.jpg" alt="Book Cover 2" class="clickable">
+            <img src="1719257220.422295.PNG" alt="Book Cover 3" class="clickable">
+            <img src="IMG_5750.jpg" alt="Book Cover 3" class="clickable">
+            <img src="1719256777.588536.PNG" alt="Book Cover 3" class="clickable">
+            <img src="77086F7F-7539-435D-B6FD-9DFEAF2F64A5.JPEG" alt="Book Cover 3" class="clickable">
+            <img src="IMG_2660.JPG" alt="Fashion 2" class="clickable">
+
+        </div>
+    </div>
+
+</div>
+<!-- Section 5: Spring Vogue Campaign  -->
+<div id="Spring-Vogue-Campaign" class="gallery-section">
+    <h2>Spring Vogue Campaign</h2>
+    <div class="photo-grid">
+        <img src="Jessa Fayer - 29.PNG" alt="Book Cover 1" class="clickable">
+        <img src="Jessa Fayer - 9.PNG" alt="Book Cover 2" class="clickable">
+        <img src="Jessa Fayer - 25.PNG" alt="Book Cover 3" class="clickable">
+        <img src="Jessa Fayer - 11.PNG" alt="Book Cover 3" class="clickable">
+        <img src="IMG_4332.jpg" alt="Book Cover 3" class="clickable">
+        <img src="IMG_4547.jpg" alt="Fashion 2" class="clickable">
+        <img src="IMG_4549.jpg" alt="Fashion 2" class="clickable">
+        <img src="IMG_4545.jpg" alt="Fashion 2" class="clickable">
+        <img src="IMG_4553.jpg" alt="Fashion 2" class="clickable">
+    </div>
+</div>
+
+</div>
+<!-- Section 5: Spring Vogue Campaign  -->
+<div id="Spring-Vogue-Campaign" class="gallery-section">
+    <h2>Spring End Vogue Campaign</h2>
+    <div class="photo-grid">
+         <img src="IMG_4581.jpg" alt="Book Cover 3" class="clickable">
+         <img src="IMG_4583 copy.jpg" alt="Book Cover 3" class="clickable">
+         <img src="Jessa Fayer - 28.PNG" alt="Book Cover 3" class="clickable">
+         <img src="IMG_4578.jpg" alt="Book Cover 3" class="clickable">
+         <img src="IMG_4584.jpg" alt="Book Cover 3" class="clickable">
+         <img src="IMG_4565.jpg" alt="Book Cover 3" class="clickable">
+         <img src="IMG_4587.jpg" alt="Book Cover 3" class="clickable">
+</div>
+</div>
+
+<!-- Section 5: Fantasy  -->
+<div id="Fantasy" class="gallery-section">
+    <h2>Fantasy</h2>
+    <div class="photo-grid">
+        <img src="IMG_9953.jpg" alt="Book Cover 1" class="clickable">
+        <img src="mom.jpg" alt="Book Cover 2" class="clickable">
+        <img src="IMG_3506.jpg" alt="Book Cover 3" class="clickable">
+        <img src="IMG_4660.jpg" alt="Book Cover 3" class="clickable">
+        <img src="IMG_4659.jpg" alt="Book Cover 3" class="clickable">
+        <img src="IMG_2982.JPG" alt="Book Cover 3" class="clickable">
+        <img src="IMG_2983.JPG" alt="Book Cover 3" class="clickable">
+    </div>
+</div>
+
+ <!-- Section 6: Katniss -->
+ <div id="Katniss" class="gallery-section">
+    <h2>Katniss</h2>
+    <div class="photo-grid">
+        <img src="IMG_4747.JPG" alt="Book Cover 1" class="clickable">
+        <img src="IMG_4501.jpg" alt="Book Cover 2" class="clickable">
+        <img src="IMG_4504 2.jpg" alt="Book Cover 3" class="clickable">
+        <img src="IMG_4507.jpg" alt="Book Cover 3" class="clickable">
+        <img src="IMG_4508 2.jpg" alt="Book Cover 3" class="clickable">
+    </div>
+</div>
+
+<!-- Section 6: Lingerie-->
+<div id="Lingerie" class="gallery-section">
+    <h2>Lingerie</h2>
+    <div class="photo-grid">
+        <img src="5F3A7E80-8174-40C9-B0C8-512FB6CB40B5 3.JPG" alt="Book Cover 1" class="clickable">
+        <img src="80648181-3192-42DE-8CFD-2319C90A6D89 3.JPG" alt="Book Cover 2" class="clickable">
+        <img src="5FF4FF8B-361C-4777-A50F-76327CAB1E12 3.JPG" alt="Book Cover 3" class="clickable">
+        <img src="56598F6F-83D4-4ED5-A6FF-6E0646B786E3 3.JPG" alt="Fashion 2" class="clickable">
+        
+    </div>
+</div>
+        <!-- Section 6: Beauty Catalog -->
+        <div id="Beauty-Catalog" class="gallery-section">
+            <h2>Beauty Catalog</h2>
+            <div class="photo-grid">
+                <img src="daddy.jpg" alt="Book Cover 1" class="clickable">
+                <img src="IMG_3517.jpg" alt="Book Cover 2" class="clickable">
+                <img src="IMG_3514.jpg" alt="Book Cover 3" class="clickable">
+                <img src="Jessa Fayer - 26.PNG" alt="Fashion 2" class="clickable">
+            </div>
+        </div>
+
+        <!-- Section 5: Fashion -->
+        <div id="fashion" class="gallery-section">
+            <h2>Fashion</h2>
+            <div class="photo-grid">
+                <img src="sos.jpg" alt="Fashion 1" class="clickable">
+                <img src="dad.jpg" alt="Fashion 2" class="clickable">
+                <img src="IMG_1677.JPG" alt="Travel 3" class="clickable">
+                <img src="IMG_1659.JPG" alt="Travel 3" class="clickable">
+                <img src="IMG_1673.JPG" alt="Travel 3" class="clickable">
+                <img src="IMG_1344 2.JPG" alt="Fashion 2" class="clickable">
+                
+            </div>
+        </div>
+
+        <!-- Section 6: Studio Shots -->
+        <div id="studio" class="gallery-section">
+            <h2>Horror</h2>
+            <div class="photo-grid">
+                <img src="587F7921-1E2C-4D03-96D8-633059B8DC4D.JPEG" alt="Studio Shot 1" class="clickable">
+                <img src="034CE847-034D-4B01-9420-1B2C7A5520A3.JPEG" alt="Studio Shot 2" class="clickable">
+                <img src="1A05E91D-58E6-4662-BACB-2B4F060B85ED.JPEG" alt="Studio Shot 3" class="clickable">
+                <img src="IMG_0940.jpg" alt="Studio Shot 3" class="clickable">
+                <img src="IMG_3559.jpg" alt="Studio Shot 3" class="clickable">
+                <img src="IMG_4781.JPG" alt="Fashion 3" class="clickable">
+             </div>
+        </div>
+
+         <!-- Section 7: Bad Seed -->
+         <div id="Bad-Seed" class="gallery-section">
+            <h2>Bad Seed</h2>
+            <div class="photo-grid">
+                <img src="IMG_1327.JPG" alt="Travel 1" class="clickable">
+                <img src="IMG_1320.JPG" alt="Travel 2" class="clickable">
+                <img src="IMG_1306.JPG" alt="Travel 3" class="clickable">
+                <img src="IMG_1342.JPG" alt="Travel 3" class="clickable">
+            </div>
+        </div>
+
+        <!-- Section 7: Travel -->
+        <div id="travel" class="gallery-section">
+            <h2>Album Cover</h2>
+            <div class="photo-grid">
+                <img src="AfterlightImage.JPG" alt="Travel 1" class="clickable">
+                <img src="IMG_0121.JPG" alt="Travel 2" class="clickable">
+                <img src="IMG_9561.JPG" alt="Travel 3" class="clickable">
+            </div>
+        </div>
+
+        <!-- Section 8: Marie Antoinette -->
+        <div id="Marie-Antoinette" class="gallery-section">
+            <h2>Marie Antoinette</h2>
+            <div class="photo-grid">
+                <img src="little.JPG" alt="Event 1" class="clickable">
+                <img src="lil.JPG" alt="Event 2" class="clickable">
+                <img src="9A6AED71-D18A-4587-A6AA-2D2E38DD96DA.JPG" alt="Event 3" class="clickable">
+                <img src="Jessa Fayer - 20.PNG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_1377.JPG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_1368.JPG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_1380.JPG" alt="Book Cover 3" class="clickable">
+                <img src="IMG_1397.JPG" alt="Book Cover 3" class="clickable">
+            </div>
+        </div>
+
+        <!-- Section 8: Twilight -->
+        <div id="Twilight" class="gallery-section">
+            <h2>Twilight</h2>
+            <div class="photo-grid">
+                <img src="1718384489.755653.PNG" alt="Event 1" class="clickable">
+                <img src="1718384667.2028.PNG" alt="Event 2" class="clickable">
+                <img src="1718384363.449445.PNG" alt="Event 3" class="clickable">
+                <img src="1716964500.586092.JPG" alt="Book Cover 3" class="clickable">
+                <img src="865550E3-EBA9-4003-BBF7-AE0BA55D0441.JPG" alt="Fashion 2" class="clickable">
+                <img src="1716806055.6721091.JPG" alt="Fashion 2" class="clickable">
+                <img src="1716963984.782109.JPG" alt="Fashion 2" class="clickable">
+            </div>
+        </div>
+
+        <!-- Section 9: Videos -->
+        <div id="videos" class="gallery-section">
+            <h2>Video Reels</h2>
+            <video controls>
+                <source src="RPReplay_Final1673126965.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video controls>
+                <source src="9de20051006c4430bdcd9f62ffbf21f2.MP4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jessa Fayer. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Lightbox -->
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const clickableImages = document.querySelectorAll('.clickable');
+        const closeBtn = document.querySelector('.close');
+
+        // Open lightbox when an image is clicked
+        clickableImages.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        // Close lightbox when the close button is clicked
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

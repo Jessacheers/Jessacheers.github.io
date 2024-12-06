@@ -5,56 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media - Jessa Fayer's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
         }
+
         header {
             text-align: center;
-            background-color: #f4f4f4;
-            padding: 10px;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            padding: 20px 10px;
         }
-        h1 {
+
+        header h1 {
             font-family: 'Parisienne', cursive;
             font-size: 3rem;
+            margin: 0;
         }
+
         .sidebar {
             position: fixed;
-            width: 200px;
+            width: 220px;
             height: 100%;
             background-color: #333;
+            color: white;
             padding-top: 20px;
-            float: left;
+            z-index: 1000;
         }
+
         .sidebar a {
             text-decoration: none;
-            display: block;
             color: white;
-            padding: 10px;
+            padding: 15px;
+            display: block;
             text-align: center;
+            transition: background-color 0.3s ease;
         }
+
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+
         .content {
-            margin-left: 220px;
+            margin-left: 240px;
             padding: 20px;
         }
+
+        h2, h3 {
+            color: #ff758c;
+            border-bottom: 2px solid #ff758c;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
         .gallery {
-            position: relative;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
             margin-top: 20px;
         }
+
         .gallery img {
             width: 100%;
-            max-width: 400px;
-            display: block;
-            margin: 10px auto;
-            position: relative;
-            z-index: 1;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
+
         .gallery img:hover {
-            z-index: 2;
+            transform: scale(1.05);
         }
+
         .lightbox {
             display: none;
             position: fixed;
@@ -65,11 +90,15 @@
             background: rgba(0, 0, 0, 0.8);
             justify-content: center;
             align-items: center;
+            z-index: 2000;
         }
-        .lightbox-content {
+
+        .lightbox img {
             max-width: 90%;
             max-height: 90%;
+            border-radius: 10px;
         }
+
         .close {
             position: absolute;
             top: 20px;
@@ -77,6 +106,27 @@
             color: white;
             font-size: 30px;
             cursor: pointer;
+        }
+
+        .video-wrapper {
+            margin-top: 20px;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -87,32 +137,37 @@
     <div class="sidebar">
         <a href="index.html">Home</a>
         <a href="media.html">Gallery</a>
-        <a href="digitals.html">Digitals</a>
+        <a href="digitals.html">Digitals & Demo Reel</a>
         <a href="skills.html">Skills & Resume</a>
         <a href="contact.html">Contact</a>
     </div>
     <div class="content">
-        <div id="media" class="section">
-            <h2>Media</h2>
+        <section id="media">
+            <h2>Model Digitals</h2>
             <div class="gallery">
-                <h3>Photos</h3>
-                <!-- Updated relative paths -->
-                <img src="sovo.jpg" alt="Photo 1" class="clickable">
-                <img src="images/IMG_2876.JPG" alt="Photo 2" class="clickable">
-                <img src="images/IMG_3189.DNG" alt="Photo 3" class="clickable">
-                <img src="images/IMG_3318.jpg" alt="Photo 4" class="clickable">
-                <!-- Add more images as needed -->
+                <img src="2.png" alt="Model Digital 1" class="clickable">
+                <img src="JPEG image-EC155FCA66C8-1.jpeg" alt="Model Digital 2" class="clickable">
+                <img src="digital3.jpg" alt="Model Digital 3" class="clickable">
+                <img src="digital4.jpg" alt="Model Digital 4" class="clickable">
             </div>
-        </div>
+        </section>
+
+        <section id="demo-reel" class="video-wrapper">
+            <h2>Acting Demo Reel</h2>
+            <video controls>
+                <source src="demoreel.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
     </div>
 
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
+        <img class="lightbox-content" id="lightbox-img" alt="Lightbox Image">
     </div>
 
     <footer>
-        <p>&copy; 2024 Jessa Fayer. All rights reserved.</p>
+        <p>&copy; 2024 Jessa Fayer. All Rights Reserved.</p>
     </footer>
 
     <script>
