@@ -110,13 +110,20 @@
 
         .video-wrapper {
             margin-top: 20px;
+            /* Responsive iframe container */
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
         }
 
-        .video-wrapper video {
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 0 auto;
+            height: 100%;
+            border: 0;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -154,10 +161,12 @@
 
         <section id="demo-reel" class="video-wrapper">
             <h2>Acting Demo Reel</h2>
-            <video controls>
-                <source src="demoreel.MOV" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <iframe 
+                src="https://www.youtube.com/embed/gJxk5ol-WEY" 
+                loading="lazy" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </section>
     </div>
 
