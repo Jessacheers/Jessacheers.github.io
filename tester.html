@@ -23,7 +23,6 @@
             color: #333;
             line-height: 1.6;
             scroll-behavior: smooth;
-            display: flex;
         }
 
         a {
@@ -89,8 +88,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Primary Navigation Sidebar (Left) */
-        nav.primary-sidebar {
+        /* Navigation Sidebar */
+        nav.sidebar {
             position: fixed;
             top: 0;
             left: 0;
@@ -103,16 +102,16 @@
             z-index: 1000;
         }
 
-        nav.primary-sidebar .nav-links {
+        nav.sidebar .nav-links {
             list-style: none;
             padding: 0;
         }
 
-        nav.primary-sidebar .nav-links li {
+        nav.sidebar .nav-links li {
             margin-bottom: 10px;
         }
 
-        nav.primary-sidebar .nav-links a {
+        nav.sidebar .nav-links a {
             text-decoration: none;
             color: white;
             padding: 15px;
@@ -122,7 +121,7 @@
             position: relative;
         }
 
-        nav.primary-sidebar .nav-links a::before {
+        nav.sidebar .nav-links a::before {
             content: '';
             position: absolute;
             left: 50%;
@@ -134,65 +133,16 @@
             transition: width 0.3s ease;
         }
 
-        nav.primary-sidebar .nav-links a:hover::before,
-        nav.primary-sidebar .nav-links a:focus::before {
+        nav.sidebar .nav-links a:hover::before,
+        nav.sidebar .nav-links a:focus::before {
             width: 100%;
         }
 
-        /* Secondary Navigation Sidebar (Right) */
-        nav.secondary-sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 180px;
-            height: 100%;
-            background-color: #ffe4e1; /* Misty Rose */
-            color: #333;
-            padding-top: 60px; /* Space for the toggle button */
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-
-        nav.secondary-sidebar .nav-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav.secondary-sidebar .nav-links li {
-            margin-bottom: 10px;
-        }
-
-        nav.secondary-sidebar .nav-links a {
-            text-decoration: none;
-            color: #333;
-            padding: 15px;
-            display: block;
-            text-align: center;
-            transition: background-color 0.3s ease;
-            position: relative;
-        }
-
-        nav.secondary-sidebar .nav-links a::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 0%;
-            height: 2px;
-            background-color: #ff69b4; /* Hot Pink */
-            transition: width 0.3s ease;
-        }
-
-        nav.secondary-sidebar .nav-links a:hover::before,
-        nav.secondary-sidebar .nav-links a:focus::before {
-            width: 100%;
-        }
-
-        /* Navigation Toggle Buttons */
+        /* Navigation Toggle Button */
         .nav-toggle {
             position: absolute;
             top: 15px;
+            right: -45px;
             background-color: #ffb6c1; /* Light Pink */
             color: white;
             border: none;
@@ -201,27 +151,12 @@
             cursor: pointer;
             display: none; /* Hidden on larger screens */
             z-index: 1001;
-            border-radius: 5px;
+            border-radius: 0 5px 5px 0;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .nav-toggle.primary-toggle {
-            left: 220px;
-        }
-
-        .nav-toggle.secondary-toggle {
-            right: 180px;
-            background-color: #ffe4e1; /* Misty Rose */
-            color: #333;
-        }
-
-        .nav-toggle.primary-toggle:hover {
+        .nav-toggle:hover {
             background-color: #ff69b4; /* Hot Pink */
-            transform: rotate(90deg);
-        }
-
-        .nav-toggle.secondary-toggle:hover {
-            background-color: #ff1493; /* Deep Pink */
             transform: rotate(90deg);
         }
 
@@ -229,42 +164,28 @@
             outline: 2px solid #ffffff;
         }
 
-        /* Show Toggle Buttons on Small Screens */
+        /* Main Content */
+        main.content {
+            margin-left: 240px;
+            padding: 20px;
+            transition: margin-left 0.3s ease;
+        }
+
         @media (max-width: 768px) {
-            nav.primary-sidebar,
-            nav.secondary-sidebar {
+            nav.sidebar {
                 transform: translateX(-100%);
             }
 
-            nav.primary-sidebar.active,
-            nav.secondary-sidebar.active {
+            nav.sidebar.active {
                 transform: translateX(0);
             }
 
-            .nav-toggle.primary-toggle,
-            .nav-toggle.secondary-toggle {
+            .nav-toggle {
                 display: block;
             }
 
-            /* Adjust main content margins when sidebars are hidden */
             main.content {
                 margin-left: 20px;
-                margin-right: 20px;
-            }
-        }
-
-        /* Main Content */
-        main.content {
-            margin-left: 240px; /* Width of primary sidebar + margin */
-            margin-right: 200px; /* Width of secondary sidebar + margin */
-            padding: 20px;
-            transition: margin-left 0.3s ease, margin-right 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            main.content {
-                margin-left: 20px;
-                margin-right: 20px;
             }
         }
 
@@ -531,7 +452,6 @@
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            padding: 20px 0;
         }
 
         section.visible {
@@ -643,8 +563,11 @@
         <h1>Jessa Fayer</h1>
     </header>
 
-    <!-- Primary Navigation Sidebar (Left) -->
-    <nav class="primary-sidebar" aria-label="Primary Navigation">
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar" aria-label="Main Navigation">
+        <button class="nav-toggle" aria-label="Open Navigation Menu">
+            <i class="fas fa-bars"></i>
+        </button>
         <ul class="nav-links">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#media">Gallery</a></li>
@@ -653,30 +576,6 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
-    <!-- Secondary Navigation Sidebar (Right) -->
-    <nav class="secondary-sidebar" aria-label="Secondary Navigation">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="landingpage.html">Landing Page</a></li>
-            <li><a href="About-Jessa.html">My Story</a></li>
-            <li><a href="Highlights.html">Projects</a></li>
-            <li><a href="skills.html">Skills & Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            
-            <li><a href="Demo.html">Acting Reel</a></li>
-            <li><a href="media.html">Gallery</a></li>
-        </ul>
-    </nav>
-
-    <!-- Navigation Toggle Buttons -->
-    <button class="nav-toggle primary-toggle" aria-label="Toggle Primary Navigation">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <button class="nav-toggle secondary-toggle" aria-label="Toggle Secondary Navigation">
-        <i class="fas fa-bars"></i>
-    </button>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" aria-label="Back to Top">
@@ -692,7 +591,7 @@
             <a href="#skills" class="resume-button">View My Resume</a> <!-- Resume Button -->
         </section>
 
-        <!-- Media Section --> 
+        <!-- Media Section -->
         <section id="media">
             <h2>Model Digitals</h2>
             <!-- Filter Buttons -->
@@ -707,24 +606,24 @@
             <!-- Gallery -->
             <div class="gallery">
                 <figure data-category="casual">
-                    <img src="IMG_2876 copy.JPG" alt="Portrait of Jessa Fayer in a casual outfit" class="clickable" loading="lazy" tabindex="0">
-                    <figcaption></figcaption>
-                </figure>
-                <figure data-category="casual">
                     <img src="sovo copy.jpg" alt="Portrait of Jessa Fayer in a casual outfit" class="clickable" loading="lazy" tabindex="0">
-                    <figcaption></figcaption>
+                    <figcaption>Casual Look</figcaption>
                 </figure>
                 <figure data-category="formal">
                     <img src="IMG_3318 copy.jpg" alt="Jessa Fayer showcasing a formal dress" class="clickable" loading="lazy" tabindex="0">
-                    <figcaption></figcaption>
+                    <figcaption>Formal Attire</figcaption>
                 </figure>
                 <figure data-category="artistic">
                     <img src="D46FA141-2BFD-45D2-8B36-271A8868A797.jpg" alt="Creative shoot with artistic lighting" class="clickable" loading="lazy" tabindex="0">
-                    <figcaption></figcaption>
+                    <figcaption>Artistic Lighting</figcaption>
                 </figure>
                 <figure data-category="nature">
                     <img src="IMG_3189 copy.DNG" alt="Outdoor photoshoot with natural scenery" class="clickable" loading="lazy" tabindex="0">
-                    <figcaption></figcaption>
+                    <figcaption>Natural Scenery</figcaption>
+                </figure>
+                <figure data-category="bw">
+                    <img src="IMG_2876 copy.JPG" alt="Black and white portrait of Jessa Fayer" class="clickable" loading="lazy" tabindex="0">
+                    <figcaption>Black &amp; White</figcaption>
                 </figure>
                 <!-- Add more figures as needed -->
             </div>
@@ -815,10 +714,8 @@
             const lightboxCaption = document.getElementById('lightbox-caption');
             const closeBtn = document.querySelector('.close');
             const clickableImages = document.querySelectorAll('.clickable');
-            const primaryNavToggle = document.querySelector('.primary-toggle');
-            const secondaryNavToggle = document.querySelector('.secondary-toggle');
-            const primarySidebar = document.querySelector('.primary-sidebar');
-            const secondarySidebar = document.querySelector('.secondary-sidebar');
+            const navToggle = document.querySelector('.nav-toggle');
+            const sidebar = document.querySelector('.sidebar');
             const filterButtons = document.querySelectorAll('.filter-btn');
             const backToTop = document.querySelector('.back-to-top');
             const sections = document.querySelectorAll('section');
@@ -874,50 +771,26 @@
                 }
             });
 
-            // Primary Navigation Toggle for Mobile
-            primaryNavToggle.addEventListener('click', () => {
-                primarySidebar.classList.toggle('active');
-                if (primarySidebar.classList.contains('active')) {
-                    primaryNavToggle.innerHTML = '<i class="fas fa-times"></i>';
-                    primaryNavToggle.setAttribute('aria-label', 'Close Primary Navigation Menu');
+            // Navigation Toggle for Mobile
+            navToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+                if (sidebar.classList.contains('active')) {
+                    navToggle.innerHTML = '<i class="fas fa-times"></i>';
+                    navToggle.setAttribute('aria-label', 'Close Navigation Menu');
                 } else {
-                    primaryNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    primaryNavToggle.setAttribute('aria-label', 'Open Primary Navigation Menu');
+                    navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    navToggle.setAttribute('aria-label', 'Open Navigation Menu');
                 }
             });
 
-            // Secondary Navigation Toggle for Mobile
-            secondaryNavToggle.addEventListener('click', () => {
-                secondarySidebar.classList.toggle('active');
-                if (secondarySidebar.classList.contains('active')) {
-                    secondaryNavToggle.innerHTML = '<i class="fas fa-times"></i>';
-                    secondaryNavToggle.setAttribute('aria-label', 'Close Secondary Navigation Menu');
-                } else {
-                    secondaryNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                    secondaryNavToggle.setAttribute('aria-label', 'Open Secondary Navigation Menu');
-                }
-            });
-
-            // Close Primary Sidebar when a link is clicked (for mobile)
-            const primaryNavLinks = document.querySelectorAll('.primary-sidebar .nav-links a');
-            primaryNavLinks.forEach(link => {
+            // Close sidebar when a link is clicked (for mobile)
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    if (primarySidebar.classList.contains('active')) {
-                        primarySidebar.classList.remove('active');
-                        primaryNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                        primaryNavToggle.setAttribute('aria-label', 'Open Primary Navigation Menu');
-                    }
-                });
-            });
-
-            // Close Secondary Sidebar when a link is clicked (for mobile)
-            const secondaryNavLinks = document.querySelectorAll('.secondary-sidebar .nav-links a');
-            secondaryNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    if (secondarySidebar.classList.contains('active')) {
-                        secondarySidebar.classList.remove('active');
-                        secondaryNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                        secondaryNavToggle.setAttribute('aria-label', 'Open Secondary Navigation Menu');
+                    if (sidebar.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                        navToggle.setAttribute('aria-label', 'Open Navigation Menu');
                     }
                 });
             });
